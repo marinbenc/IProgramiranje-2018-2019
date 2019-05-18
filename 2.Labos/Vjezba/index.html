@@ -115,6 +115,78 @@
         padding: 0 500%;
         padding-top: 1em;
       }
+
+      .section-content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .section-content p {
+        padding-top: 1em;
+        width: 20em;
+        padding-right: 2em;
+      }
+
+      .section-content img {
+        padding-top: 1.7em;
+        width: 17em;
+        height: 17em;
+      }
+
+      .cta-background {
+        background-color: rgb(45, 45, 45);
+        width: 100vw;
+        position: relative;
+        margin-left: -50vw;
+        margin-top: 100px;
+        left: 50%;
+      }
+
+      .cta {
+        color: white;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .cta button {
+        padding: 1em;
+        border-radius: 0.3em;
+        border: none;
+        background-color: rgb(200, 200, 200);
+        margin-bottom: 2em;
+      }
+      
+      .contact-form input {
+        margin-bottom: 2em;
+        margin-top: 1em;
+        width: 100%;
+        border-radius: 0.3em;
+        border: 1px solid rgb(200, 200, 200);
+      }
+
+      .contact-form h3 {
+        margin-bottom: 2em;
+      }
+
+      .contact-form #input-content {
+        height: 200px;
+      }
+
+      .contact {
+        display: flex;
+      }
+
+      .contact-form {
+        flex-grow: 1;
+        padding-right: 2em;
+      }
+
+      .contact .map {
+        width: 450px;
+        height: 450px;
+        background-color: #333;
+      }
     </style>
 </head>
 
@@ -173,19 +245,30 @@
             </div>
           </section>
           <section class="section">
-              <h3>Section</h3>
-              <p>Prvi section</p>
-              <aside>
-                  <img src="https://dumielauxepices.net/sites/default/files/mountain-ridge-clipart-appalachian-mountains-690100-4107111.jpg" />
-              </aside>
+              <div class="section-header">
+                <h3>Section</h3>
+                <h4>Prvi section</h4>  
+              </div>
+              <hr />
+              <div class="section-content">
+                <p>Neki tekst. Neki tekst Neki tekst. Neki tekst. Neki tekst. Neki tekst. Neki tekst. Neki tekst.</p>
+                <img src="https://dumielauxepices.net/sites/default/files/mountain-ridge-clipart-appalachian-mountains-690100-4107111.jpg" />
+              </div>
           </section>
-          <section class="cta">
+          <div class="cta-background">
+            <section class="cta">
               <h2>Neki tekst</h2>
               <button>Neki button</button>
-          </section>
+            </section>
+          </div>
           <section class="contact">
               <div class="contact-form">
-
+                <h3>Forma</h3>
+                <label for="title">Naslov</label><br />
+                <input name="title" id="input-title"><br />
+                <label for="content">Sadržaj</label><br />
+                <input name="content" id="input-content">
+                <input type="submit" value="Submit">
               </div>
               <div class="map">
                   
