@@ -40,7 +40,6 @@
         color: white;
       }
 
-
       header figure {
         margin: 0;
       }
@@ -111,8 +110,12 @@
 
       .first-section {
         background-color: #dadada;
-        margin: 0 -500%;
-        padding: 0 500%;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
         padding-top: 1em;
       }
 
@@ -133,13 +136,15 @@
         height: 17em;
       }
 
-      .cta-background {
+      .dark-background {
         background-color: rgb(45, 45, 45);
         width: 100vw;
         position: relative;
-        margin-left: -50vw;
-        margin-top: 100px;
         left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        color: white;
       }
 
       .cta {
@@ -157,12 +162,23 @@
         margin-bottom: 2em;
       }
       
-      .contact-form input {
+      .contact-form input, textarea {
         margin-bottom: 2em;
         margin-top: 1em;
         width: 100%;
         border-radius: 0.3em;
         border: 1px solid rgb(200, 200, 200);
+      }
+
+      textarea {
+        margin-right: -1em;
+      }
+
+      .contact-form .button {
+        padding: 1em;
+        border-radius: 0.3em;
+        border: none;
+        background-color: rgb(200, 200, 200);
       }
 
       .contact-form h3 {
@@ -186,6 +202,63 @@
         width: 450px;
         height: 450px;
         background-color: #333;
+      }
+
+      footer {
+        color: white;
+        max-width: 900px;
+        margin: 0 auto;
+        color: white;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-links {
+        width: 200px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links ul li {
+        margin: 0;
+        padding: 0;
+        margin-right: 3em;
+      }
+
+      .footer-social ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin-left: -1em;
+      }
+
+      .footer-social li {
+        width: 3em;
+        height: 3em;
+        padding-right: 1em;
+      }
+
+      .footer-social li img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .copyright {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding-top: 3em;
+        padding-bottom: 5em;
       }
     </style>
 </head>
@@ -255,7 +328,7 @@
                 <img src="https://dumielauxepices.net/sites/default/files/mountain-ridge-clipart-appalachian-mountains-690100-4107111.jpg" />
               </div>
           </section>
-          <div class="cta-background">
+          <div class="dark-background">
             <section class="cta">
               <h2>Neki tekst</h2>
               <button>Neki button</button>
@@ -267,13 +340,39 @@
                 <label for="title">Naslov</label><br />
                 <input name="title" id="input-title"><br />
                 <label for="content">Sadržaj</label><br />
-                <input name="content" id="input-content">
-                <input type="submit" value="Submit">
+                <textarea name="content" id="input-content"></textarea>
+                <input class="button" type="submit" value="Submit">
               </div>
               <div class="map">
                   
               </div>
           </section>
+          <div class="dark-background">
+            <footer>
+              <div class="footer-content">
+                <nav class="footer-links">
+                  <h3>Footer</h3>
+                  <ul>
+                    <li>Link 1</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                    <li>Link 4</li>
+                    <li>Link 5</li>
+                    <li>Link 6</li>
+                  </ul>
+                </nav>
+                <div class="footer-social">
+                  <ul>
+                    <li><img src="http://assets.stickpng.com/thumbs/5a2fe3efcc45e43754640848.png" /></li>
+                    <li><img src="http://assets.stickpng.com/thumbs/5a2fe3efcc45e43754640848.png" /></li>
+                    <li><img src="http://assets.stickpng.com/thumbs/5a2fe3efcc45e43754640848.png" /></li>
+                    <li><img src="http://assets.stickpng.com/thumbs/5a2fe3efcc45e43754640848.png" /></li>
+                  </ul>
+                </div>
+              </div>
+              <span class="copyright">Copyright 2019 FERIT</span>
+            </footer>
+          </div>
     </div>
 </body>
 
